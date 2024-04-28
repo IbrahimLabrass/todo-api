@@ -8,6 +8,7 @@ import com.ibrahim.todo.dto.UserDto;
 
 import java.util.List;
 
+import static com.ibrahim.todo.utils.Constants.APP_ROOT;
 
 @Api(APP_ROOT + "/users")
 public interface UserApi {

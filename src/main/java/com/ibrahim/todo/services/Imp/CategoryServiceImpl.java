@@ -10,6 +10,7 @@ import com.ibrahim.todo.exception.ErrorCodes;
 import com.ibrahim.todo.exception.InvalidEntityException;
 import com.ibrahim.todo.repositories.CategoryRepository;
 import com.ibrahim.todo.services.CategoryService;
+import com.ibrahim.todo.validators.CategoryValidator;
 
 import java.time.ZonedDateTime;
 import java.util.List;

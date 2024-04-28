@@ -10,6 +10,7 @@ import com.ibrahim.todo.exception.ErrorCodes;
 import com.ibrahim.todo.exception.InvalidEntityException;
 import com.ibrahim.todo.repositories.UserRepository;
 import com.ibrahim.todo.services.UserService;
+import com.ibrahim.todo.validators.UserValidator;
 
 import java.util.List;
 import java.util.stream.Collectors;

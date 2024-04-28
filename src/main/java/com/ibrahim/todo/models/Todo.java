@@ -95,9 +95,5 @@ public class Todo implements Serializable {
 		this.category = category;
 	}
 
-	@Override
-	public String toString() {
-		return "Todo [id=" + id + ", title=" + title + ", description=" + description + ", startDate=" + startDate
-				+ ", done=" + done + ", favorite=" + favorite + ", category=" + category + "]";
-	}
+	
 }

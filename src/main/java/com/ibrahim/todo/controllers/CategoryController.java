@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ibrahim.todo.controllers.api.CategoryApi;
 import com.ibrahim.todo.dto.CategoryDto;
+import com.ibrahim.todo.dto.TodoDto;
 import com.ibrahim.todo.services.CategoryService;
 import com.ibrahim.todo.services.TodoService;
 

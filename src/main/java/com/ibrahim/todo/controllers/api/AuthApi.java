@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.ibrahim.todo.dto.UserDto;
 
+import static com.ibrahim.todo.utils.Constants.APP_ROOT;
 
 @Api("authApi")
 public interface AuthApi {
