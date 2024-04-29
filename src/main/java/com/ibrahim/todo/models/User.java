@@ -91,9 +91,4 @@ public class User  implements Serializable {
 		this.category = category;
 	}
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", userName=" + userName + ", password=" + password + ", category=" + category + "]";
-	}
 }

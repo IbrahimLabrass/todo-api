@@ -1,4 +1,5 @@
 package com.ibrahim.todo.controllers;
+import com.ibrahim.todo.dto.TodoDto;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -7,7 +8,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ibrahim.todo.controllers.api.TodoApi;
-import com.ibrahim.todo.dto.TodoDto;
 import com.ibrahim.todo.services.CategoryService;
 import com.ibrahim.todo.services.TodoService;
 
@@ -47,4 +47,12 @@ public class TodoController implements TodoApi {
     public ResponseEntity deleteTodo(Long id) {
         return null;
     }
+
+	public CategoryService getCategoryService() {
+		return categoryService;
+	}
+
+	public void setCategoryService(CategoryService categoryService) {
+		this.categoryService = categoryService;
+	}
 }

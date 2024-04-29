@@ -78,9 +78,5 @@ public class Category implements Serializable {
 		this.todoList = todoList;
 	}
 
-	@Override
-	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", description=" + description + ", user=" + user
-				+ ", todoList=" + todoList + "]";
-	}
+
 }

@@ -7,6 +7,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.ibrahim.todo.dto.UserDto;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 import static com.ibrahim.todo.utils.Constants.APP_ROOT;
 
 @Api("authApi")
@@ -20,3 +26,4 @@ public interface AuthApi {
     ResponseEntity<UserDto> loginUser(
             @ApiParam(value = "User DTO", required = true) @RequestBody UserDto user
     );
+}

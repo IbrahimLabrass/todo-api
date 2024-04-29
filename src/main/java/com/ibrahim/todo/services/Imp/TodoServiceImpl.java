@@ -9,10 +9,12 @@ import com.ibrahim.todo.dto.TodoDto;
 import com.ibrahim.todo.exception.EntityNotFoundException;
 import com.ibrahim.todo.exception.ErrorCodes;
 import com.ibrahim.todo.exception.InvalidEntityException;
+import com.ibrahim.todo.models.Category;
 import com.ibrahim.todo.models.Todo;
 import com.ibrahim.todo.repositories.CategoryRepository;
 import com.ibrahim.todo.repositories.TodoRepository;
 import com.ibrahim.todo.services.TodoService;
+import com.ibrahim.todo.validators.TodoValidator;
 
 import java.util.List;
 import java.util.Optional;

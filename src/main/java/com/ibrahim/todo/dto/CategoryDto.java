@@ -1,14 +1,14 @@
 package com.ibrahim.todo.dto;
 
+import  lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
 import com.ibrahim.todo.models.Category;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
@@ -37,7 +37,18 @@ public class CategoryDto {
         return category;
     }
 
-    public Long getId() {
+    public static CategoryDto fromEntity(Category category) {
+        return CategoryDto.builder()
+                .id(category.getId())
+                .name(category.getName())
+                .description(category.getDescription())
+                .todoList(
+                        category.getTodoList() != null ? category.getTodoList().stream().map(TodoDto::fromEntity).collect(Collectors.toList()) : null
+                )
+                .build();
+    }
+
+	public Long getId() {
 		return id;
 	}
 
@@ -76,15 +87,5 @@ public class CategoryDto {
 	public void setTodoList(List<TodoDto> todoList) {
 		this.todoList = todoList;
 	}
-
-	public static CategoryDto fromEntity(Category category) {
-        return CategoryDto.builder()
-                .id(category.getId())
-                .name(category.getName())
-                .description(category.getDescription())
-                .todoList(
-                        category.getTodoList() != null ? category.getTodoList().stream().map(TodoDto::fromEntity).collect(Collectors.toList()) : null
-                )
-                .build();
-    }
+	
 }
